@@ -1,0 +1,52 @@
+# ==================================================================
+# TinyWin 11 POS ISO Builder - Git Ignore
+# ==================================================================
+
+# DISM mount & staging working directory (Build-TinyWin11.ps1 -WorkDir)
+work/
+mount/
+boot_mount/
+
+# Build output (keep the folder, drop the artifacts)
+output/*
+!output/.gitkeep
+
+# Source Windows ISOs & WIM/ESD images (multi-GB, never commit)
+*.iso
+*.wim
+*.esd
+*.swm
+iso/*
+!iso/README.md
+
+# Pre-downloaded Winget installer cache (-PreDownloadApps) & downloaded build tools
+apps/cache/
+tools/
+
+# Offline installers (private MeshCentral agents, third-party setups)
+apps/installers/*
+!apps/installers/README.md
+
+# OEM driver packs (multi-GB vendor binaries) - keep the folder, drop the contents
+drivers/*
+!drivers/README.md
+
+# Windows installer / binary artifacts anywhere else
+*.exe
+*.msi
+*.msix
+*.msixbundle
+*.cab
+*.pdb
+
+# Logs & temp files
+*.log
+*.tmp
+*.bak
+
+# OS / Editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
